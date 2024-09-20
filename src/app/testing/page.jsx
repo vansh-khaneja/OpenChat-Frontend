@@ -85,7 +85,7 @@ const FullPageChatbotWithApiKey = () => {
       chatHistory.push({ role: 'user', content: input });
 
       // Send both the API key and the chat history
-      const response = await axios.post('https://open-chat-backend-deploy-production.up.railway.app/query', {
+      const response = await axios.post('http://127.0.0.1:5000/query', {
         query: input,
         chat_history: chatHistory,
         api_key: apiKey || defaultApiKey,

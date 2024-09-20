@@ -47,7 +47,7 @@ export default function NextPageModal({ isOpen, onClose, selectedFeatures, model
     };
 
     try {
-      const response = await fetch('https://open-chat-backend-deploy-production.up.railway.app/text', {
+      const response = await fetch('http://127.0.0.1:5000/text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -74,7 +74,7 @@ export default function FloatingChatbot({ apiKey = defaultApiKey, userId }) {
       chatHistoryFormatted.push({ role: 'user', content: query });
 
       // Send both the API key and the chat history
-      const response = await axios.post('https://open-chat-backend-deploy-production.up.railway.app/query', {
+      const response = await axios.post('http://127.0.0.1:5000/query', {
         query,
         chat_history: chatHistoryFormatted,
         api_key: apiKey,

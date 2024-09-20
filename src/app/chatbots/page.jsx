@@ -118,7 +118,7 @@ export default function ChatbotImplementationGuide() {
       
             chatHistory.push({ role: 'user', content: input })
       
-            const response = await axios.post('https://open-chat-backend-deploy-production.up.railway.app/query', {
+            const response = await axios.post('http://127.0.0.1:5000/query', {
               query: input,
               chat_history: chatHistory,
               api_key: apiKey,
@@ -324,7 +324,7 @@ export default function FloatingChatbot({ apiKey = "5b8b563c5d62dffe" }) {
 
       chatHistory.push({ role: 'user', content: input })
 
-      const response = await axios.post('https://open-chat-backend-deploy-production.up.railway.app/query', {
+      const response = await axios.post('http://127.0.0.1:5000/query', {
         query: input,
         chat_history: chatHistory,
         api_key: apiKey,
